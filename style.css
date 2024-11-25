@@ -1,0 +1,515 @@
+/* Configurações gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.interface {
+  margin: 0 auto;
+  max-width: 80vw;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  background-color: rgb(23, 218, 23);
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.logo span {
+  color: rgb(23, 218, 23);
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+}
+
+.sociais {
+  display: flex;
+}
+
+.sociais div {
+  background-color: rgb(23, 218, 23);
+  margin-right: 15px;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.sociais div a {
+  color: black;
+  font-size: 25px;
+  width: 50px;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.sociais div a i {
+  transition: 1s;
+}
+
+.sociais div a i:hover {
+  display: inline-block;
+  transform: scale(1.2, 1.2);
+  color: white;
+}
+
+.sociais div{
+  transition: 1s;
+}
+
+.sociais div:hover{
+  background-color: rgba(255, 255, 255, 0.175);
+}
+
+/* Configuração header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .nav-principal ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 30px;
+  cursor: pointer;
+}
+
+header .nav-principal ul li a {
+  color: rgb(107, 103, 103);
+  transition: color 0.5s, transform 1s ease;
+  font-size: 20px;
+}
+
+header .nav-principal ul li a:hover {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  transform: scale(1.2);
+}
+
+/* menu-navegação */
+header .menu-navegação {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 450px;
+  z-index: 9999;
+  transition: 0.5s;
+}
+
+header .abrir-menu {
+  width: 40%;
+}
+
+header .menu-navegação ul {
+  display: flex;
+  flex-direction: column;
+}
+
+header .menu-navegação ul li {
+  display: block;
+  text-align: right;
+  padding: 20px 10px;
+  width: 100%;
+}
+
+header .menu-navegação ul li a {
+  color: white;
+  font-size: 30px;
+}
+
+header .menu-navegação ul li:hover {
+  background-color: rgb(23, 218, 23);
+}
+
+header .menu-navegação .close {
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+header .menu-navegação i {
+  color: white;
+  font-size: 50px;
+}
+
+header .abrir i {
+  font-size: 50px;
+  cursor: pointer;
+  display: none;
+}
+
+/* primeira sectin */
+main .priSection {
+  display: flex;
+  padding: 80px 0;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  gap: 100px;
+}
+
+main .priSection .intro {
+  padding-top: 100px;
+}
+
+main .priSection .intro button {
+  font-size: 20px;
+  margin-bottom: 100px;
+}
+
+main .priSection .intro h1 {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+main .priSection .intro p {
+  margin: 40px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main .priSection .fotoFlutuante img {
+  width: 250px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+  box-shadow: 0 0 10px 5px rgb(23, 218, 23);
+  border: none;
+}
+
+@keyframes flutuar {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+/* Configuração especialidades */
+main .segSection h1 {
+  text-align: center;
+}
+
+main .segSection h1 span {
+  color: rgb(23, 218, 23);
+  font-weight: bold;
+}
+
+main .segSection .blocosEspecialidades {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 70px;
+}
+
+main .segSection .blocosEspecialidades * {
+  margin-bottom: 20px;
+}
+
+main .segSection .blocosEspecialidades .block {
+  transition: color 0.5s, transform 1s ease;
+  cursor: pointer;
+  padding: 20px;
+  width: 50%;
+}
+
+main .segSection .blocosEspecialidades .block:hover {
+  display: inline-block;
+  transform: scale(1.1);
+  box-shadow: 0 0 5px 1px #656262;
+}
+
+main .segSection .blocosEspecialidades .block p{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main .segSection .blocosEspecialidades div i {
+  font-size: 50px;
+  color: rgb(23, 218, 23);
+}
+
+/* Apresentação */
+main .triSection {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-top: 80px;
+}
+
+main .triSection .imgApresentation img {
+  width: 300px;
+  height: 350px;
+  border: none;
+  border-radius: 30px;
+}
+
+main .triSection .apresentation h1 {
+  font-size: 40px;
+  line-height: 1em;
+}
+
+main .triSection .apresentation h1 span {
+  color: rgb(23, 218, 23);
+  display: block;
+}
+
+main .triSection .apresentation p {
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* portifólios */
+main .forSection {
+  margin-top: 8em;
+  padding: 50px 0;
+  box-shadow: 0 0 40px 10px #ffffff1d;
+  position: relative;
+}
+
+main .forSection h1 {
+  text-align: center;
+}
+
+main .forSection h1 span {
+  color: rgb(23, 218, 23);
+}
+
+main .forSection .projects {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+main .forSection .projects div {
+  width: 350px;
+  height: 450px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: 8s;
+  cursor: pointer;
+}
+
+main .forSection p {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  padding: 10px 20px;
+  background-color: rgb(23, 218, 23);
+  border-radius: 10px;
+}
+
+main .forSection .projects div:hover {
+  background-position: 100% 100%;
+}
+
+main .forSection .projects div .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 0;
+  background-color: #00000089;
+}
+
+main .forSection .projects div .overlay:hover {
+  opacity: 1;
+}
+
+/* formulário */
+main .fivSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+main .fivSection h1 span {
+  color: rgb(23, 218, 23);
+}
+
+main .fivSection form {
+  margin: 30px 0;
+  width: 400px;
+}
+
+main .fivSection form input,
+main .fivSection form textarea {
+  display: block;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 20px 10px;
+  background-color: #ffffff46;
+  border: none;
+  color: black;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+main .fivSection form input[type="submit"] {
+  background-color: rgb(23, 218, 23);
+  width: 150px;
+  height: 60px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+main footer {
+  box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+main .sixSection .footerSup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgb(23, 218, 23);
+  padding: 30px 0;
+}
+
+main .sixSection .footerInf {
+  padding: 20px 0;
+}
+
+main .sixSection .footerInf i {
+  color: rgb(23, 218, 23);
+}
+
+main .sixSection .footerInf i a {
+  color: white;
+  margin-left: 10px;
+}
+
+/* estilizando botão de voltar no topo*/
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: rgb(23, 218, 23);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.5s;
+  font-size: 40px;
+}
+
+.back-to-top.show {
+  opacity: 1;
+}
+
+.back-to-top:hover {
+  transform: scale(1.5, 1.5);
+}
+
+/* responsividade */
+@media screen and (max-width: 1100px) {
+  /* header */
+  header {
+    padding-top: 10px;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  header .nav-principal {
+    display: none;
+  }
+  header .btn {
+    display: none;
+  }
+
+  header .abrir i {
+    display: block;
+  }
+
+  /* primeira section */
+  main .priSection {
+    flex-direction: column-reverse;
+  }
+
+  /* segSection especialidades */
+  main .segSection {
+    margin-bottom: 150px;
+  }
+
+  main .segSection .blocosEspecialidades {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  main .segSection .blocosEspecialidades .block {
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+  }
+
+  /* triSection sobre mim*/
+  main .triSection {
+    flex-direction: column-reverse;
+    margin-bottom: 100px;
+  }
+
+  main .triSection .apresentation p {
+    margin: 40px 0;
+  }
+
+  /* forSection portifólio */
+  main .forSection {
+    margin-top: 40px;
+  }
+
+  main .forSection .projects {
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* formulario */
+  main #fivSection form input::placeholder,
+  main #fivSection form textarea::placeholder {
+    font-size: 20px;
+  }
+}
